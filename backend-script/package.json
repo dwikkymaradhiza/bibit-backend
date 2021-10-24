@@ -1,0 +1,44 @@
+{
+  "name": "backend-script",
+  "version": "1.0.0",
+  "description": "Bibit Test Backend Script",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "npm run test",
+    "clean-code": "eslint . --ext .js --cache --color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwikkymaradhiza/bibit-backend.git"
+  },
+  "author": "dwikkymaradhiza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwikkymaradhiza/bibit-backend/issues"
+  },
+  "homepage": "https://github.com/dwikkymaradhiza/bibit-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.4",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1",
+    "sequelize": "^6.7.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run clean-code",
+      "git add"
+    ]
+  }
+}
