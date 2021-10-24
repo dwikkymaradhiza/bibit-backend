@@ -8,6 +8,12 @@
     "test": "jest",
     "clean-code": "eslint . --ext .js --cache --color"
   },
+  "lint-staged": {
+    "*.js": [
+      "npm run clean-code",
+      "git add"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dwikkymaradhiza/bibit-backend.git"
@@ -19,6 +25,7 @@
   },
   "homepage": "https://github.com/dwikkymaradhiza/bibit-backend#readme",
   "dependencies": {
+    "axios": "^0.23.0",
     "express": "^4.17.1",
     "mysql2": "^2.3.2"
   },
@@ -35,11 +42,5 @@
     "nodemon": "^2.0.14",
     "prettier": "^2.4.1",
     "sequelize": "^6.7.0"
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run clean-code",
-      "git add"
-    ]
   }
 }

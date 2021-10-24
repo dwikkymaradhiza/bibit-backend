@@ -6,7 +6,6 @@ const sequelize = new Sequelize(
   null,
   {
     dialect: 'mysql',
-    operatorsAliases: Sequelize.Op,
     logging: false,
     replication: {
       read: [
