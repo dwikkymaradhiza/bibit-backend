@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // Controllers
-const movie = require('../controllers/movie');
+const movieController = require('../controllers/movie.controller');
 
 // Middlewares
 // const { checkAuthorization } = require('../app/middlewares');
@@ -14,7 +14,7 @@ const movie = require('../controllers/movie');
 
 // Movie Controller
 // router.use('/', checkAuthorization());
-router.get('/search', movie.searchMovie);
-router.get('/detail/:id', movie.getDetailMovie);
+router.get('/search', movieController.searchMovie);
+router.get('/detail/:id', movieController.getDetailMovie);
 
 module.exports = router;
