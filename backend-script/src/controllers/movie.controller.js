@@ -31,7 +31,7 @@ Controller.searchMovie = async (req, res) => {
 
     return res.status(httpStatus.ok).json(mappingResult);
   } catch (e) {
-    logger.error(e);
+    logger.error(e.message);
     return res.status(httpStatus.internalServerError).json({
       error: e.message,
       code: errorCodes.internalServerError,
